@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif; margin:0; padding:0;}
+.topbar {display: none !important}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color:black;
+  background-color: #fff9f3;
+                                    
+}
+li {float: left;}
+li a, .dropbtn {
+    display: inline-block;
+    color:black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn {background-color: #d66b00; border-radius: 3px;color:white;}
+li.dropdown {display: inline-block;}
+.version{font-size: 8px;}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  border-radius: 3px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #d66b00; color:white;}
+.dropdown:hover .dropdown-content{display: block;}
+.right{float: right;}
+.left{float:left;}
+</style>
+<ul>
+  <li class="dropdown ">
+    <a href="javascript:void(0)" class="dropbtn"><i class="fa fa-fw fa-bars"></i> </a>
+    <div class="dropdown-content">
+        
+        <a class="version"><span class="version">Company.Product.Package v1.0.1.0</span></a>
+    </div>
+  </li>
+  <li>
+    <a href="">
+      <img height="15" src=""/> Company.Product.Package
+    </a>
+  </li>
+ 
+</ul>
