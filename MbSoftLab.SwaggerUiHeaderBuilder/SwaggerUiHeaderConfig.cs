@@ -6,7 +6,6 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder
 {
     public class SwaggerUiCustomHeaderConfig
     {
-   
         public String Version { get; set; }
         public String Titel { get; set; }
         public String HeaderImageSrc { get; set; } = "";

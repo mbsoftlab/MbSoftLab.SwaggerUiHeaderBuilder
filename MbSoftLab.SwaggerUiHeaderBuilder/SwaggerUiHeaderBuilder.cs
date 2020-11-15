@@ -1,7 +1,5 @@
 ﻿using MbSoftLab.TemplateEngine.Core;
 using System;
-using System.IO;
-using System.Reflection;
 
 namespace MbSoftLab.SwaggerUiHeaderBuilder
 {
