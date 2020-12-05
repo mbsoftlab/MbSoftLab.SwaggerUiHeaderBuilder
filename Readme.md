@@ -4,22 +4,43 @@ Der SwaggerUiHeaderBuilder erstellt einen Spezial-Header für das Swagger Ui
 ```cs
     public class SwaggerUiHeaderBuilder
     { 
-        public SwaggerUiHeaderBuilder();
-        public SwaggerUiHeaderBuilder AddCustomLink(string caption, Uri href);
-        public SwaggerUiHeaderBuilder ForHeaderBgColor(string value);
-        public SwaggerUiHeaderBuilder ForHeaderFontColor(string value);
-        public SwaggerUiHeaderBuilder ForHoverBgColor(string value);
-        public SwaggerUiHeaderBuilder ForHoverFontColor(string value);
-        public SwaggerUiHeaderBuilder ForImageSrc(string value);
-        public SwaggerUiHeaderBuilder ForTitel(string value);
-        public SwaggerUiHeaderBuilder ForVersion(string value);
-        public string Build();
+		ISwaggerUiHeaderBuilder AddCustomLink(string caption, Uri href);
+		ISwaggerUiHeaderBuilder UseConfig(ISwaggerUiCustomHeaderConfig value);
+		ISwaggerUiHeaderBuilder ForHeaderBgColor(string value);
+		ISwaggerUiHeaderBuilder ForHeaderFontColor(string value);
+		ISwaggerUiHeaderBuilder ForHoverBgColor(string value);
+		ISwaggerUiHeaderBuilder ForHoverFontColor(string value);
+		ISwaggerUiHeaderBuilder ForImageSrc(string value);
+		ISwaggerUiHeaderBuilder ForTitel(string value);
+		ISwaggerUiHeaderBuilder ForVersion(string value);
+		string Build();
     }
 ```
 
-## Beispiel: 
+## Beispiele: 
 
-```cs 
+### Beispiel 1
+```csharp
+            app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyApi V1");
+
+                    c.UseCustomHeader(header => header
+                                          .ForTitel("MyTestTitel")
+                                          .ForVersion("v1.0.0.1")
+                                          .AddCustomLink("MyCustomLink1", new Uri("https://myCutom1.url"))
+                                          .AddCustomLink("MyCustomLink2", new Uri("https://myCutom2.url"))
+                                          .ForHeaderBgColor("#fff9f3")
+                                          .ForHoverBgColor("#d66b00")
+                                          .ForHeaderFontColor("black"));
+
+                });
+            }
+
+```
+
+### Beispiel 2
+```csharp 
            app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyApi V1");
@@ -37,4 +58,20 @@ Der SwaggerUiHeaderBuilder erstellt einen Spezial-Header für das Swagger Ui
             });
 
 ```
+### Beispiel 3
+```csharp 
+           app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyApi V1");
+         
+                //Example 3
+                c.UseCustomHeader(header => header
+                                          .UseConfig(_swaggerUiCustomHeaderConfig)
+                                          .AddCustomLink("MyCustomLink1", new Uri("https://myCutom1.url"))
+                                          .AddCustomLink("MyCustomLink2", new Uri("https://myCutom2.url")));
+               
+            });
+
+```
+ 
 
