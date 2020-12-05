@@ -5,7 +5,7 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder.Test
 {
     public class SwaggerUiHeaderBuilderTest
     {
-        ISwaggerUiHeaderBuilder _swaggerUiHeaderBuilder;
+        SwaggerUiHeaderBuilder _swaggerUiHeaderBuilder;
         [SetUp]
         public void Setup()
         {

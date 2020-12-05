@@ -52,11 +52,22 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder
             _swaggerUiCustomHeaderConfig.HoverFontColor = value;
             return this;
         }
+        /// <summary>
+        /// Adds a custom Link to the hamburger menu
+        /// </summary>
+        /// <param name="caption">Visable linkcaption </param>
+        /// <param name="href">URL to customlink</param>
+        /// <returns></returns>
         public ISwaggerUiHeaderBuilder AddCustomLink(string caption, Uri href)
         {
             this._swaggerUiCustomHeaderConfig.CustomLinks += $"<a href='{href.OriginalString}'>{caption}</a>";
             return this;
         }
+        /// <summary>
+        /// Builds the custom HeadContent as HTML with the specified parameters
+        /// <see cref="SwaggerUiOptionsHeadContentExtensions.UseCustomHeader(Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions, Action{SwaggerUiHeaderBuilder})"/> 
+        ///</summary>
+        /// <returns>String with HTML Header for </returns>
         public string Build()
         {
             string customHeaderHtmlTemplate = _headerTemplateLoader.GetHeaderTemplateFromRessource();

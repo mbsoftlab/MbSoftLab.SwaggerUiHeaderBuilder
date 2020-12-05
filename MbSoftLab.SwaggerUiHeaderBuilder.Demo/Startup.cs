@@ -45,13 +45,14 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder.Demo
                 {
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyApi V1");
 
-                    c.UseCustomHeader(header => header.ForTitel("MyTestTitel")
-                                   .ForVersion("v1.0.0.1")
-                                   .AddCustomLink("MyCustomLink1", new Uri("https://myCutom1.url"))
-                                   .AddCustomLink("MyCustomLink2", new Uri("https://myCutom2.url"))
-                                   .ForHeaderBgColor("#fff9f3")
-                                   .ForHoverBgColor("#d66b00")
-                                   .ForHeaderFontColor("black"));
+                    c.UseCustomHeader(header => header
+                                          .ForTitel("MyTestTitel")
+                                          .ForVersion("v1.0.0.1")
+                                          .AddCustomLink("MyCustomLink1", new Uri("https://myCutom1.url"))
+                                          .AddCustomLink("MyCustomLink2", new Uri("https://myCutom2.url"))
+                                          .ForHeaderBgColor("#fff9f3")
+                                          .ForHoverBgColor("#d66b00")
+                                          .ForHeaderFontColor("black"));
 
                     //c.HeadContent = new SwaggerUiHeaderBuilder()
                     //               .ForTitel("MyTestTitel")
