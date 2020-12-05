@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MbSoftLab.SwaggerUiHeaderBu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MbSoftLab.SwaggerUiHeaderBuilder.Test", "MbSoftLab.SwaggerUiHeaderBuilder.Test\MbSoftLab.SwaggerUiHeaderBuilder.Test.csproj", "{B49423EB-0380-4620-BF24-79DA932EFE00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MbSoftLab.SwaggerUiHeaderBuilder.Demo", "MbSoftLab.SwaggerUiHeaderBuilder.Demo\MbSoftLab.SwaggerUiHeaderBuilder.Demo.csproj", "{7265B1E3-22BA-4F1B-9443-129AF6519576}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B49423EB-0380-4620-BF24-79DA932EFE00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B49423EB-0380-4620-BF24-79DA932EFE00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B49423EB-0380-4620-BF24-79DA932EFE00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7265B1E3-22BA-4F1B-9443-129AF6519576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7265B1E3-22BA-4F1B-9443-129AF6519576}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7265B1E3-22BA-4F1B-9443-129AF6519576}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7265B1E3-22BA-4F1B-9443-129AF6519576}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

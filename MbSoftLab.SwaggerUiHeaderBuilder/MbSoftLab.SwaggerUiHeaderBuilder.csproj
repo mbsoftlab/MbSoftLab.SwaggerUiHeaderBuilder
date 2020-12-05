@@ -50,8 +50,8 @@ Der SwaggerUiHeaderBuilder erstellt einen Spezial-Header für das Swagger Ui
 </Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RepositoryUrl>https://bitbucket.org/MbSoftLab/mbsoftlab.swaggeruiheaderbuilder</RepositoryUrl>
-    <AssemblyVersion>0.0.9.0</AssemblyVersion>
-    <FileVersion>0.0.9.0</FileVersion>
+    <AssemblyVersion>0.0.9.1</AssemblyVersion>
+    <FileVersion>0.0.9.1</FileVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://bitbucket.org/MbSoftLab/mbsoftlab.swaggeruiheaderbuilder</PackageProjectUrl>
   </PropertyGroup>
@@ -75,6 +75,7 @@ Der SwaggerUiHeaderBuilder erstellt einen Spezial-Header für das Swagger Ui
 
   <ItemGroup>
     <PackageReference Include="MbSoftLab.TemplateEngine.Core" Version="1.0.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.6.3" />
   </ItemGroup>
 
 </Project>

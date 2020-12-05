@@ -5,13 +5,13 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder.Test
 {
     public class SwaggerUiHeaderBuilderTest
     {
-        SwaggerUiHeaderBuilder _swaggerUiHeaderBuilder;
+        ISwaggerUiHeaderBuilder _swaggerUiHeaderBuilder;
         [SetUp]
         public void Setup()
         {
             _swaggerUiHeaderBuilder = new SwaggerUiHeaderBuilder();
         }
-    
+
 
         [Test]
         public void Can_set_a_titel()
@@ -60,7 +60,7 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder.Test
                   .Build();
             Assert.AreEqual(true, htmlheader.Contains(version));
         }
-   
+
         public void Can_set_custom_links()
         {
             string customLink1Text = "TextOfSpezialLink1";
@@ -69,8 +69,8 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder.Test
             string customLink2Url = "https://MyCustomLink2.de/";
 
             string htmlheader = _swaggerUiHeaderBuilder
-                  .AddCustomLink(customLink1Text,new System.Uri(customLink1Url))
-                  .AddCustomLink(customLink2Text,new System.Uri(customLink2Url))
+                  .AddCustomLink(customLink1Text, new System.Uri(customLink1Url))
+                  .AddCustomLink(customLink2Text, new System.Uri(customLink2Url))
                   .Build();
             Assert.AreEqual(true, htmlheader.Contains($"<a href='{customLink1Url}'>{customLink1Text}</a><a href='{customLink2Url}'>{customLink2Text}</a>"));
         }
@@ -86,15 +86,15 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder.Test
         [Test]
         public void Can_set_a_BgColor_for_content_dropdown()
         {
-          string htmlheader=_swaggerUiHeaderBuilder
-                .ForTitel("MyTestTitel")
-                .ForVersion("v1.0.0.1")
-                .AddCustomLink("MyCustomLink1", new System.Uri("https://myCutom1.url"))
-                .AddCustomLink("MyCustomLink2", new System.Uri("https://myCutom2.url"))
-                .Build();
+            string htmlheader = _swaggerUiHeaderBuilder
+                  .ForTitel("MyTestTitel")
+                  .ForVersion("v1.0.0.1")
+                  .AddCustomLink("MyCustomLink1", new System.Uri("https://myCutom1.url"))
+                  .AddCustomLink("MyCustomLink2", new System.Uri("https://myCutom2.url"))
+                  .Build();
 
 
-            Assert.AreEqual(true,htmlheader.Contains(".dropdown-content a:hover {background-color: #c56900; color:white;}"));
+            Assert.AreEqual(true, htmlheader.Contains(".dropdown-content a:hover {background-color: #c56900; color:white;}"));
         }
         [Test]
         public void can_create_a_valid_header()
@@ -106,6 +106,24 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder.Test
                   .ForHoverBgColor("#d66b00")
                   .ForHeaderFontColor("black")
                   .Build();
+            File.WriteAllText("outputHeader.html", htmlheader);
+            string sollHeader = File.ReadAllText(Directory.GetCurrentDirectory() + "/SollHeader.html");
+
+            Assert.AreEqual(sollHeader, htmlheader);
+        }
+
+        [Test]
+        public void can_use_a_config()
+        {
+            string htmlheader = _swaggerUiHeaderBuilder
+                  .UseConfig(new SwaggerUiCustomHeaderConfig()
+                     {
+                         Titel = "Company.Product.Package",
+                         Version = "v1.0.1.0",
+                         HeaderBgColor= "#fff9f3",
+                         HoverColor= "#d66b00",
+                         HeaderFontColor= "black"
+                  }).Build();
             File.WriteAllText("outputHeader.html", htmlheader);
             string sollHeader = File.ReadAllText(Directory.GetCurrentDirectory() + "/SollHeader.html");
 
