@@ -53,7 +53,7 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder
             return this;
         }
         /// <summary>
-        /// Adds a custom Link to the hamburger menu
+        /// Add a custom Link to the hamburger menu
         /// </summary>
         /// <param name="caption">Visable linkcaption </param>
         /// <param name="href">URL to customlink</param>

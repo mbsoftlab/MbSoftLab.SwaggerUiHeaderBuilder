@@ -5,14 +5,12 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder.Test
 {
     public class SwaggerUiHeaderBuilderTest
     {
-        SwaggerUiHeaderBuilder _swaggerUiHeaderBuilder;
+        ISwaggerUiHeaderBuilder _swaggerUiHeaderBuilder;
         [SetUp]
         public void Setup()
         {
             _swaggerUiHeaderBuilder = new SwaggerUiHeaderBuilder();
         }
-
-
         [Test]
         public void Can_set_a_titel()
         {
@@ -49,8 +47,6 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder.Test
                   .Build();
             Assert.AreEqual(true, htmlheader.Contains(headerFontColor));
         }
-
-
         [Test]
         public void Can_set_a_version()
         {
@@ -60,8 +56,8 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder.Test
                   .Build();
             Assert.AreEqual(true, htmlheader.Contains(version));
         }
-
-        public void Can_set_custom_links()
+        [Test]
+        public void Can_add_custom_links()
         {
             string customLink1Text = "TextOfSpezialLink1";
             string customLink1Url = "https://MyCustomLink1.de/";
@@ -75,7 +71,7 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder.Test
             Assert.AreEqual(true, htmlheader.Contains($"<a href='{customLink1Url}'>{customLink1Text}</a><a href='{customLink2Url}'>{customLink2Text}</a>"));
         }
         [Test]
-        public void Can_set_a_hover_color()
+        public void Can_set_a_hoverBgColor()
         {
             string hovercolor = "#1234";
             string htmlheader = _swaggerUiHeaderBuilder
@@ -97,7 +93,7 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder.Test
             Assert.AreEqual(true, htmlheader.Contains(".dropdown-content a:hover {background-color: #c56900; color:white;}"));
         }
         [Test]
-        public void can_create_a_valid_header()
+        public void Can_create_a_valid_header()
         {
             string htmlheader = _swaggerUiHeaderBuilder
                   .ForTitel("Company.Product.Package")
@@ -113,17 +109,18 @@ namespace MbSoftLab.SwaggerUiHeaderBuilder.Test
         }
 
         [Test]
-        public void can_use_a_config()
+        public void Can_use_a_config()
         {
             string htmlheader = _swaggerUiHeaderBuilder
                   .UseConfig(new SwaggerUiCustomHeaderConfig()
-                     {
-                         Titel = "Company.Product.Package",
-                         Version = "v1.0.1.0",
-                         HeaderBgColor= "#fff9f3",
-                         HoverColor= "#d66b00",
-                         HeaderFontColor= "black"
+                  {
+                      Titel = "Company.Product.Package",
+                      Version = "v1.0.1.0",
+                      HeaderBgColor = "#fff9f3",
+                      HoverColor = "#d66b00",
+                      HeaderFontColor = "black"
                   }).Build();
+
             File.WriteAllText("outputHeader.html", htmlheader);
             string sollHeader = File.ReadAllText(Directory.GetCurrentDirectory() + "/SollHeader.html");
 
