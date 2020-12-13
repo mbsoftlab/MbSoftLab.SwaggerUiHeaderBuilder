@@ -2,7 +2,7 @@ name: ReleaseFromDevelop
 
 on:
   workflow_run:
-    workflows: ["BuildFromDevelop"]
+    workflows: [BuildFromDevelop]
     branches: [ develop ]
     types:
       - completed
