@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>0.0.9-beta</Version>
+    <Version>0.0.9</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>MbSoftLabLogo.png</PackageIcon>
     <PackageIconUrl />
@@ -52,8 +52,8 @@
 </Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/mbsoftlab/SwaggerUiHeaderBuilder.git</RepositoryUrl>
-    <AssemblyVersion>0.0.9.1</AssemblyVersion>
-    <FileVersion>0.0.9.1</FileVersion>
+    <AssemblyVersion>0.0.9.2</AssemblyVersion>
+    <FileVersion>0.0.9.2</FileVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/mbsoftlab/SwaggerUiHeaderBuilder.git</PackageProjectUrl>
   </PropertyGroup>
