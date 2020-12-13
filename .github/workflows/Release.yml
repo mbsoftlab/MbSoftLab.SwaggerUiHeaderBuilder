@@ -1,8 +1,10 @@
-name: ReleaseFromDevelop
+name: Release
 
 on:
  release:
-    types: [published]
+    types: 
+      - published
+      - prereleased
 
 jobs:
   publish-nuget:
