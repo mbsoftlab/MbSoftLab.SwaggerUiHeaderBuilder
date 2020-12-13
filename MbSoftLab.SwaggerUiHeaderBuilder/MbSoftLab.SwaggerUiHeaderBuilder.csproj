@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>0.0.9-preview</Version>
+    <Version>0.0.9</Version>
+	<PackageVersion>0.0.9-preview</PackageVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>MbSoftLabLogo.png</PackageIcon>
     <PackageIconUrl />
