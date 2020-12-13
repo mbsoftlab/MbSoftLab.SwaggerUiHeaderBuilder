@@ -1,11 +1,8 @@
 name: ReleaseFromDevelop
 
 on:
-  workflow_run:
-    workflows: [BuildFromDevelop]
-    branches: [ develop ]
-    types:
-      - completed
+release:
+    types: [published]
 
 jobs:
   publish-nuget:
