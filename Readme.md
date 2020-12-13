@@ -1,6 +1,8 @@
 ﻿# MbSoftLab.SwaggerUiHeaderBuilder
 
-*Develop*![BuildFromDevelop](https://github.com/mbsoftlab/SwaggerUiHeaderBuilder/workflows/BuildFromDevelop/badge.svg?branch=develop) [![CodeFactor](https://www.codefactor.io/repository/github/mbsoftlab/mbsoftlab.swaggeruiheaderbuilder/badge)](https://www.codefactor.io/repository/github/mbsoftlab/mbsoftlab.swaggeruiheaderbuilder)
+*Develop*![BuildFromDevelop](https://github.com/mbsoftlab/SwaggerUiHeaderBuilder/workflows/BuildFromDevelop/badge.svg?branch=develop)[![CodeFactor](https://www.codefactor.io/repository/github/mbsoftlab/mbsoftlab.swaggeruiheaderbuilder/badge/develop)](https://www.codefactor.io/repository/github/mbsoftlab/mbsoftlab.swaggeruiheaderbuilder/overview/develop)
+
+*Master* [![CodeFactor](https://www.codefactor.io/repository/github/mbsoftlab/mbsoftlab.swaggeruiheaderbuilder/badge)](https://www.codefactor.io/repository/github/mbsoftlab/mbsoftlab.swaggeruiheaderbuilder)
 
 
 Der SwaggerUiHeaderBuilder erstellt einen Spezial-Header für das Swagger Ui
