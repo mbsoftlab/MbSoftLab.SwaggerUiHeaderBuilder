@@ -1,5 +1,6 @@
 ﻿# MbSoftLab.SwaggerUiHeaderBuilder
 
+
 ![BuildFromDevelop](https://github.com/mbsoftlab/SwaggerUiHeaderBuilder/workflows/BuildFromDevelop/badge.svg?branch=develop)
 
 Der SwaggerUiHeaderBuilder erstellt einen Spezial-Header für das Swagger Ui
