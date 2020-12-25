@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <Version>0.0.9</Version>
-	<PackageVersion>0.0.9-preview</PackageVersion>
+	<PackageVersion>0.0.9-preview2</PackageVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>MbSoftLabLogo.png</PackageIcon>
     <PackageIconUrl />
@@ -37,7 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MbSoftLab.TemplateEngine.Core" Version="1.0.7-preview" />
+    <PackageReference Include="MbSoftLab.TemplateEngine.Core" Version="1.0.7" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.6.3" />
   </ItemGroup>
 
