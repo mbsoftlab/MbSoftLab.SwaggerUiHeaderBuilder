@@ -2,60 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>0.0.9-beta</Version>
+    <Version>0.1.0</Version>
+	<PackageVersion>0.0.9-preview2</PackageVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageIcon>MbSoftLabLogo.png</PackageIcon>
-    <PackageIconUrl />
+	<PackageIconUrl>https://de.gravatar.com/userimage/205621361/74a446bec33ca5fb6ec16f5f5bb61de6.png</PackageIconUrl>
     <PackageTags>SwaggerUI Custom Header</PackageTags>
-    <Description>
-		# MbSoftLab.SwaggerUiHeaderBuilder
-
-		Der SwaggerUiHeaderBuilder erstellt einen Spezial-Header für das Swagger Ui
-		```cs
-		
-		public class SwaggerUiHeaderBuilder
-		{
-		ISwaggerUiHeaderBuilder AddCustomLink(string caption, Uri href);
-		string Build();
-		ISwaggerUiHeaderBuilder UseConfig(ISwaggerUiCustomHeaderConfig value);
-		ISwaggerUiHeaderBuilder ForHeaderBgColor(string value);
-		ISwaggerUiHeaderBuilder ForHeaderFontColor(string value);
-		ISwaggerUiHeaderBuilder ForHoverBgColor(string value);
-		ISwaggerUiHeaderBuilder ForHoverFontColor(string value);
-		ISwaggerUiHeaderBuilder ForImageSrc(string value);
-		ISwaggerUiHeaderBuilder ForTitel(string value);
-		ISwaggerUiHeaderBuilder ForVersion(string value);
-		}
-		```
-
-		## Beispiel:
-
-		```cs
-		app.UseSwaggerUI(c =&gt;
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyApi V1");
-         
-                c.HeadContent = new SwaggerUiHeaderBuilder()
-                               .ForTitel("MyTestTitel")
-                               .ForVersion("v1.0.0.1")
-                               .AddCustomLink("MyCustomLink1", new System.Uri("https://myCutom1.url"))
-                               .AddCustomLink("MyCustomLink2", new System.Uri("https://myCutom2.url"))
-                               .ForHeaderBgColor("#fff9f3")
-                               .ForHoverBgColor("#d66b00")
-                               .ForHeaderFontColor("black")
-                               .Build();
-               
-            });
-
-```
-
-</Description>
+    <Description>Der SwaggerUiHeaderBuilder erstellt einen Spezial-Header für das Swagger Ui</Description>
+	<DocumentationFile>Readme-nuget.md</DocumentationFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <RepositoryUrl>https://github.com/mbsoftlab/SwaggerUiHeaderBuilder.git</RepositoryUrl>
-    <AssemblyVersion>0.0.9.1</AssemblyVersion>
-    <FileVersion>0.0.9.1</FileVersion>
+    <RepositoryUrl>https://github.com/mbsoftlab/MbSoftLab.SwaggerUiHeaderBuilder</RepositoryUrl>
+    <AssemblyVersion>0.0.1.0</AssemblyVersion>
+    <FileVersion>0.0.1.0</FileVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://github.com/mbsoftlab/SwaggerUiHeaderBuilder.git</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/mbsoftlab/MbSoftLab.SwaggerUiHeaderBuilder</PackageProjectUrl>
+    <RepositoryType>Git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -69,14 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="MbSoftLabLogo.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="MbSoftLab.TemplateEngine.Core" Version="1.0.5" />
+    <PackageReference Include="MbSoftLab.TemplateEngine.Core" Version="1.0.7" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.6.3" />
   </ItemGroup>
 
