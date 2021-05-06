@@ -19,9 +19,9 @@
     <RepositoryType>Git</RepositoryType>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Custom.Header.Template.html" />
-  </ItemGroup
+	<ItemGroup>
+		<None Remove="Custom.Header.Template.html" />
+	</ItemGroup>
   <ItemGroup>
 	  <None Include="MbSoftLabLogo.png">
 		  <Pack>True</Pack>
