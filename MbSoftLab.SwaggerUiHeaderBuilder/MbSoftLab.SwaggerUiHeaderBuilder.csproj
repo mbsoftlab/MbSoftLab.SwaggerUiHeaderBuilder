@@ -29,13 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="MbSoftLabLogo.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="MbSoftLab.TemplateEngine.Core" Version="1.0.7" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.6.3" />
   </ItemGroup>
