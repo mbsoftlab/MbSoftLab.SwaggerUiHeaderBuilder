@@ -5,8 +5,7 @@
     <Version>0.0.9</Version>
 	<PackageVersion>0.0.9-preview2</PackageVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageIcon>MbSoftLabLogo.png</PackageIcon>
-    <PackageIconUrl />
+	<PackageIconUrl>https://de.gravatar.com/userimage/205621361/74a446bec33ca5fb6ec16f5f5bb61de6.png</PackageIconUrl>
     <PackageTags>SwaggerUI Custom Header</PackageTags>
     <Description>Der SwaggerUiHeaderBuilder erstellt einen Spezial-Header für das Swagger Ui</Description>
 	<DocumentationFile>Readme-nuget.md</DocumentationFile>
