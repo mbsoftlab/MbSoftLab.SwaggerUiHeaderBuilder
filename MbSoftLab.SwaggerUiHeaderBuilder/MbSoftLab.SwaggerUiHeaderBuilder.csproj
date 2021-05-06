@@ -14,7 +14,7 @@
     <AssemblyVersion>0.0.9.5</AssemblyVersion>
     <FileVersion>0.0.9.5</FileVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://github.com/mbsoftlab/MbSoftLab.SwaggerUiHeaderBuilder</PackageProjectUrl>
+    <PackageIcon>https://github.com/mbsoftlab/MbSoftLab.SwaggerUiHeaderBuilder</PackageIcon>
     <RepositoryType>Git</RepositoryType>
   </PropertyGroup>
 
